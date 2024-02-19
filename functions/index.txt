@@ -1,0 +1,86 @@
+//  Function declaration.
+
+function square(number) { //params is passed in the parentisis
+    // statement
+}
+
+square() // function call/ invocation
+
+Function expression is when you save function in a variable
+
+// Function Expression
+const nameFunction = function(params) {}
+
+// Arrow Function
+const arrowFn = (parentisis) => {block}
+
+=>  = Arrow
+
+Example
+With an arrow function this represents the owner of the function:
+
+// Arrow Function:
+hello = () => {
+  document.getElementById("demo").innerHTML += this;
+}
+
+// The window object calls the function:
+window.addEventListener("load", hello);
+
+// A button object calls the function:
+document.getElementById("btn").addEventListener("click", hello);
+
+
+
+// Function Expression
+const expression = function(firstName) {
+    console.log(`Hello ${firstName}`);
+}
+
+expression("Eef")
+
+
+A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+The parentheses may include parameter names separated by commas:
+(parameter1, parameter2, ...)
+
+The code to be executed, by the function, is placed inside curly brackets: {}
+
+
+Function Return
+When JavaScript reaches a return statement, the function will stop executing.
+
+If the function was invoked from a statement, JavaScript will "return" to execute the code after the invoking statement.
+
+Functions often compute a return value. The return value is "returned" back to the "caller":
+
+
+
+
+The Arguments Object
+JavaScript functions have a built-in object called the arguments object.
+
+The argument object contains an array of the arguments used when the function was called (invoked).
+
+This way you can simply use a function to find (for instance) the highest value in a list of numbers:
+
+Example
+x = findMax(1, 123, 500, 115, 44, 88);
+
+function findMax() {
+  let max = -Infinity;
+  for (let i = 0; i < arguments.length; i++) {
+    if (arguments[i] > max) {
+      max = arguments[i];
+    }
+  }
+  return max;
+}
+
+
+//  return
+
+The return statement stops the execution of a function and returns a value
