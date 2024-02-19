@@ -22,12 +22,12 @@ sayHello(`Class Captain 🙅‍♂️`)
 sayHello(`Nafisah`)
 
 
-// const division = (number) => {
-//     return number / number;
-// }
+const division = (number) => {
+    return number / number;
+}
 
-// const answer = division(4)
-// console.log(answer);
+const answer = division(4)
+console.log(answer);
 
 const square2 = number => {return number * number}
 const square3 = number => number * number
