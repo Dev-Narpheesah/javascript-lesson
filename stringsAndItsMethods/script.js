@@ -8,33 +8,39 @@ const words = "ï am a boy"
 
 
 // backticks(``)
-const worlds = `ï am a boy`
+// const worlds = `ï am a boy`
 
-// console.log(world, words, worlds)
-
-
-const age = 12
-const school = 'DLT'
-const name = `Eef`
-
-const sentence = `my name is ${name}, I am ${age} years old and i go to ${school} school`
-
-console.log(sentence)
+// // console.log(world, words, worlds)
 
 
-const math = "2 + 2"
+// const age = 12
+// const school = 'DLT'
+// const name = `Eef`
 
-const mathematics = `${2 + 2}`
+// const sentence = `my name is ${name}, I am ${age} years old and i go to ${school} school`
 
-const lines = `1
-2
-3
-4
-5`
+// console.log(sentence)
 
-console.log(lines);
 
-const numerals = `Hello i'm Aliyu and iam from "kogi state"`
-console.log(numerals)
+// const math = "2 + 2"
+
+// const mathematics = `${2 + 2}`
+
+// const lines = `1
+// 2
+// 3
+// 4
+// 5`
+
+// console.log(lines);
+
+// const numerals = `Hello i'm Aliyu and iam from "kogi state"`
+// console.log(numerals)
 
 // Checking the lenght of a string
+
+const name = "Hayzed"
+
+console.log(name.length)
+
+console.log(name[0])
