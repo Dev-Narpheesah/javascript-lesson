@@ -1,10 +1,10 @@
 //  Types of strings
 
 // single qoute ('')
-const world = 'ï am a boy'
+// const world = 'ï am a boy'
 
-// double qoute ("")
-const words = "ï am a boy"
+// // double qoute ("")
+// const words = "ï am a boy"
 
 
 // backticks(``)
@@ -44,3 +44,33 @@ const name = "Hayzed"
 console.log(name.length)
 
 console.log(name[0])
+
+
+
+//  Changing the case of string
+
+const words = "i am a boy"
+
+const word = "SHE IS A GIRL"
+
+console.log(words.toUpperCase())
+console.log(word.toLowerCase())
+
+// Checking for Substring
+
+const man = "I love coding and my favourite language is Javascript"
+
+const final = man.indexOf(' ')
+console.log(final)
+
+const check = man.includes('favourite')
+
+const starting = man.startsWith('I')
+const ending = man.endsWith('t')
+
+
+
+console.log(check)
+console.log(starting)
+console.log(ending)
+
