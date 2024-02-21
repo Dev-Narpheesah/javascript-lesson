@@ -1,0 +1,61 @@
+JavaScript String split()
+Examples
+Split the words:
+
+let text = "How are you doing today?";
+const myArray = text.split(" ");
+Split the words, and return the second word:
+
+let text = "How are you doing today?";
+const myArray = text.split(" ");
+let word = myArray[1];
+Split the characters, including spaces:
+const myArray = text.split("");
+Use the limit parameter:
+
+const myArray = text.split(" ", 3);
+More examples below.
+
+Description
+The split() method splits a string into an array of substrings.
+
+The split() method returns the new array.
+
+The split() method does not change the original string.
+
+If (" ") is used as separator, the string is split between words.
+
+
+
+
+
+The reverse() method reverses the order of the elements in an array.
+
+The reverse() method overwrites the original array.
+
+
+The join() Method
+The join() method joins array elements into a string.
+
+It this example we have used " * " as a separator between the elements:
+
+Banana * Orange * Apple * Mango
+
+
+Description
+The repeat() method returns a string with a number of copies of a string.
+
+The repeat() method returns a new string.
+
+The repeat() method does not change the original string.
+
+
+
+
+
+
+Description
+The trim() method removes whitespace from both sides of a string.
+
+The trim() method does not change the original string.
+

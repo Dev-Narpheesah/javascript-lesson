@@ -74,3 +74,42 @@ console.log(check)
 console.log(starting)
 console.log(ending)
 
+
+
+  //   Getting a substring 
+
+//    SLICE METHOD
+  const exampleString = "Hotdog"
+  console.log(exampleString.slice(0, 3))
+  console.log(exampleString.slice( 3))
+  console.log(exampleString.slice(-1))
+
+//   SPLIT METHOD
+const sentence1 = "The quick brown fox jumped over the lazy dog";
+console.log(sentence1.split(' '));
+
+const name42 = "Nafisah and Zainab";
+const split11 = name42.split(' ')
+console.log(split11);
+
+// // REVERSE() AND JOIN() METHOD
+const name4 = "Nafisah and Zainab";
+const split1 = name4.split(' ')
+// console.log(split1);
+
+const reverse$ = split1.reverse()
+console.log(reverse$);
+
+
+const join1 = reverse$.join('-')
+console.log(join1);
+
+
+//  REPEAT ()
+const dogSays = "woof ";
+console.log(dogSays.repeat(2));
+
+// TRIM() METHOD
+
+const trim = " @example.com "
+console.log(trim.trim())
