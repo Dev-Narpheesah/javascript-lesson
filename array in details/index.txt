@@ -1,0 +1,8 @@
+An array in JavaScript is a type of global object that is used to store data. Arrays consist of an ordered collection or list containing zero or more data types, and use numbered indices starting from 0 to access specific items.
+
+
+
+
+//ARRAY-PUSH =>The push() add element to d last array:
+
+//ARRAY-POP =>The pop() remove element from d last array:
