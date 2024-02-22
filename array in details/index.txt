@@ -6,3 +6,166 @@ An array in JavaScript is a type of global object that is used to store data. Ar
 //ARRAY-PUSH =>The push() add element to d last array:
 
 //ARRAY-POP =>The pop() remove element from d last array:
+
+Popping and Pushing
+When you work with arrays, it is easy to remove elements and add new elements.
+
+This is what popping and pushing is:
+
+Popping items out of an array, or pushing items into an array.
+
+
+
+
+
+
+JavaScript Array shift()
+The shift() method removes the first array element and "shifts" all other elements to a lower index.
+
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
+The shift() method returns the value that was "shifted out":
+
+
+
+
+Shifting Elements
+Shifting is equivalent to popping, but working on the first element instead of the last.
+
+JavaScript Array shift()
+The shift() method removes the first array element and "shifts" all other elements to a lower index.
+
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();
+
+
+
+JavaScript Array unshift()
+The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon");
+The unshift() method returns the new array length:
+
+
+Changing Elements
+Array elements are accessed using their index number:
+
+Array indexes start with 0:
+
+[0] is the first array element
+[1] is the second
+[2] is the third ...
+
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[0] = "Kiwi";
+JavaScript Array length
+The length property provides an easy way to append a new element to an array:
+
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[fruits.length] = "Kiwi";
+JavaScript Array delete()
+Warning !
+Using delete() leaves undefined holes in the array.
+
+Use pop() or shift() instead.
+
+
+
+
+JavaScript Array splice()
+Examples
+At position 2, add 2 elements:
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+fruits.splice(2, 0, "Lemon", "Kiwi");
+At position 2, remove 2 items:
+
+const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi"];
+fruits.splice(2, 2);
+Description
+The splice() method adds and/or removes array elements.
+
+The splice() method overwrites the original array.
+
+Syntax
+array.splice(index, howmany, item1, ....., itemX)
+
+
+Description
+The toString() method returns a string as a string.
+
+The toString() method does not change the original string.
+
+The toString() method can be used to convert a string object into a string.
+
+Example
+Get the content of the text:
+
+let text = "Hello World!";
+let result = text.toString();
+Same as:
+
+let text = "Hello World!";
+let result = text;
+
+
+Description
+The includes() method returns true if an array contains a specified value.
+
+The includes() method returns false if the value is not found.
+
+The includes() method is case sensitive.
+
+
+
+Sorting an Array
+The sort() method sorts an array alphabetically:
+
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();
+
+Reversing an Array
+
+The reverse() method reverses the elements in an array:
+
+Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.reverse();
+By combining sort() and reverse(), you can sort an array in descending order:
+
+
+
+Description
+The indexOf() method returns the position of the first occurrence of a value in a string.
+
+The indexOf() method returns -1 if the value is not found.
+
+The indexOf() method is case sensitive.
+
+
+Description
+The forEach() method calls a function for each element in an array.
+
+The forEach() method is not executed for empty elements.
+
+Example 1
+Calls a function for each element in fruits:
+
+const fruits = ["apple", "orange", "cherry"];
+fruits.forEach(myFunction);
+
+
+Description
+map() creates a new array from calling a function for every array element.
+
+map() does not execute the function for empty elements.
+
+map() does not change the original array.
