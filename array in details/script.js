@@ -328,3 +328,77 @@ const aquaticAnimals = creatures.filter((creature) => {
 });
 
 console.log(aquaticAnimals);
+
+
+// ARRAY FIND
+
+const digits = [1,2,3,4,5,6,7,8,9]
+
+const value = digits.find((digit) => {
+  return digit > 4
+});
+
+console.log(value);
+
+const states = [
+  'Ogun State',
+  'Kogi State',
+  'Anambra State',
+  'Lagos State',
+  'Benue State',
+]
+
+const state = states.find((state) => {
+  return state.startsWith("L")
+});
+
+console.log(state);
+
+// CLASS WORK
+
+// A student Assessment took place, with a total mark of 10, Give us 7 students and mark them over 10, now give a reward to each students with a score over the mark of 6
+
+const students = [
+  {name: "Hayzed", score: 9},
+  {name: "Basirat", score: 5},
+  {name: "Soliu", score: 10},
+  {name: "Bode", score: 7},
+  {name: "Kenny", score: 4},
+  {name: "Zainab", score: 6},
+  {name: "Tunmise", score: 10}
+]
+
+const assess = students.filter((student) => {
+  return student.score > 6
+});
+console.log(assess);
+
+const studentsName = assess.map((student) => {
+  return student.name
+});
+console.log(studentsName);
+
+studentsName.forEach((name) => console.log(`Hello, ${name} you have been promoted to the next class`) );
+
+// ARRAY SOME AND EVERY
+
+const box = [1,2,3,4,5,6,7]
+
+console.log(box.some((el) => {return el < 8}));
+console.log(box.every((el) => {return el > 4}));
+
+
+// ARRAY REDUCE
+
+const boxes = [1,2,3,4,5,6,7,8,9,10]
+
+const answer = boxes.reduce((accumulator, value) => {
+  return accumulator + value
+}, 0)
+
+// 0 + 1 = 1 => accumulator
+// 1 + 2 = 3 => accumulator
+// 3 + 3 = 3 => accumulator
+// 6 + 4 = 10 => accumulator
+
+console.log(answer)

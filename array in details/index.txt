@@ -187,3 +187,88 @@ const result = ages.filter(checkAdult);
 function checkAdult(age) {
   return age >= 18;
 }
+
+
+
+
+
+Description
+The some() method checks if any array elements pass a test (provided as a callback function).
+
+The some() method executes the callback function once for each array element.
+
+The some() method returns true (and stops) if the function returns true for one of the array elements.
+
+The some() method returns false if the function returns false for all of the array elements.
+
+The some() method does not execute the function for empty array elements.
+
+The some() method does not change the original array.
+
+Example 1
+Check if any values are over 18:
+
+const ages = [3, 10, 18, 20];
+
+ages.some(checkAdult);
+function checkAdult(age) {
+  return age > 18;
+}
+
+
+
+Description
+The every() method executes a function for each array element.
+
+The every() method returns true if the function returns true for all elements.
+
+The every() method returns false if the function returns false for one element.
+
+The every() method does not execute the function for empty elements.
+
+The every() method does not change the original array
+
+Example 1
+Check if all values in ages[] are over 18:
+
+const ages = [32, 33, 16, 40];
+
+ages.every(checkAge)
+
+function checkAge(age) {
+  return age > 18;
+}
+
+
+
+// ARRAY REDUCE
+
+Array Reduce() loops through the array and return the sum of the array. It takes two properties: a callback function and an initial value. the call back function takes two parameters which are acccumulator and value,
+
+
+Description
+The reduce() method executes a reducer function for array element.
+
+The reduce() method returns a single value: the function's accumulated result.
+
+The reduce() method does not execute the function for empty array elements.
+
+The reduce() method does not change the original array.
+
+Examples
+Subtract all numbers in an array:
+
+const numbers = [175, 50, 25];
+
+document.getElementById("demo").innerHTML = numbers.reduce(myFunc);
+
+function myFunc(total, num) {
+  return total - num;
+}
+
+const numbers = [15.5, 2.3, 1.1, 4.7];
+document.getElementById("demo").innerHTML = numbers.reduce(getSum, 0);
+
+function getSum(total, num) {
+  return total + Math.round(num);
+}
