@@ -1,5 +1,121 @@
+JavaScript Properties
+Properties are the values associated with a JavaScript object.
+
+A JavaScript object is a collection of unordered properties.
+
+Properties can usually be changed, added, and deleted, but some are read only.
+
 / OBJECTS
 
 // Objects are used to represent real life datas
 
 // Objects is an unordered collection of related data in form of key and value pairs
+
+
+
+What is this?
+In JavaScript, the this keyword refers to an object.
+
+Which object depends on how this is being invoked (used or called).
+
+The this keyword refers to different objects depending on how it is used:
+
+In an object method, this refers to the object.
+Alone, this refers to the global object.
+In a function, this refers to the global object.
+In a function, in strict mode, this is undefined.
+In an event, this refers to the element that received the event.
+Methods like call(), apply(), and bind() can refer this to any object.
+Note
+this is not a variable. It is a keyword. You cannot change the value of this.
+See Also:
+The JavaScript this Tutorial
+
+JavaScript Methods
+JavaScript methods are actions that can be performed on objects.
+
+A JavaScript method is a property containing a function definition.
+
+Property	Value
+firstName	John
+lastName	Doe
+age	50
+eyeColor	blue
+fullName	function() {return this.firstName + " " + this.lastName;}
+
+Methods are functions stored as object properties.
+
+
+
+Description
+The Object.keys() method returns an Array Iterator object with the keys of an object.
+
+The Object.keys() method does not change the original object.
+
+
+
+Description
+The entries() method returns an Array Iterator object with key/value pairs:
+
+[0, "Banana"]
+[1, "Orange"]
+[2, "Apple"]
+[3, "Mango"]
+
+The entries() method does not change the original array.
+
+
+Example
+Create an Array Iterator, and then iterate over the key/value pairs:
+
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+const f = fruits.entries();
+
+for (let x of f) {
+  document.getElementById("demo").innerHTML += x;
+}
+
+
+
+Managing Objects
+// Create object with an existing object as prototype
+Object.create()
+
+// Adding or changing an object property
+Object.defineProperty(object, property, descriptor)
+
+// Adding or changing object properties
+Object.defineProperties(object, descriptors)
+
+// Accessing Properties
+Object.getOwnPropertyDescriptor(object, property)
+
+// Returns all properties as an array
+Object.getOwnPropertyNames(object)
+
+// Accessing the prototype
+Object.getPrototypeOf(object)
+
+// Returns enumerable properties as an array
+Object.keys(object)
+
+
+
+Protecting Objects
+// Prevents adding properties to an object
+Object.preventExtensions(object)
+
+// Returns true if properties can be added to an object
+Object.isExtensible(object)
+
+// Prevents changes of object properties (not values)
+Object.seal(object)
+
+// Returns true if object is sealed
+Object.isSealed(object)
+
+// Prevents any changes to an object
+Object.freeze(object)
+
+// Returns true if object is frozen
+Object.isFrozen(object)
