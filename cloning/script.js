@@ -81,3 +81,26 @@ const arr3 = [8,9]
 const merged = [...arr1, ...arr2, ...arr3];
 
 console.log(merged);
+
+
+const text = {name: "Bode"};
+const numbs = [1, 2, 3, 4];
+
+const cloneMerged = {...text, number:[...numbs]}
+
+cloneMerged.name = "Hayzed"
+// cloneMerged.number(5);
+
+console.log(text);
+console.log(numbs);
+
+
+const texts = {name: "bode"};
+ const numb = [1,2,3,4];
+texts.name = "Hayzed"
+numb.push(7)
+ const cloneMerge = {...text, ...numb };
+ console.log(cloneMerge);
+
+
+ 
