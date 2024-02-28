@@ -17,11 +17,11 @@ console.log(person === otherPerson);
 // SHALLOW CLONING
 // spread Operator (...)
 
-// const numbers = [1,2,3,4,5,6];
-// console.log(...numbers);
+const number = [1,2,3,4,5,6];
+console.log(...number);
 
-// const newNumber =[...numbers];
-// console.log(newNumber);
+const newNumbr =[...number];
+console.log(newNumbr);
 
 // to get equality
 
