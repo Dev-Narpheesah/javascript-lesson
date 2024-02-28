@@ -6,17 +6,17 @@
 
 const firstName = "Soliu";
 
-const person = {
-    firstName,
-    surname: "Hayzed",
-    age: 158,
-    children: {
-        firstChild: "Eef",
-        secondChild: "Nafisat"
-    }
-}
+// const person = {
+//     firstName,
+//     surname: "Hayzed",
+//     age: 158,
+//     children: {
+//         firstChild: "Eef",
+//         secondChild: "Nafisat"
+//     }
+// }
    
-console.log(person)
+// console.log(person)
 
 
 //********* ASSESSING AND ADDING OF PROPERTIES TO AN OBJECT ************//
@@ -143,3 +143,101 @@ console.log(userInfoOne);
 userInfoOne.userName = "Az"
 userInfoOne.age = 32
 console.log(userInfoOne);
+
+
+let x;
+let y;
+const person = {
+    name: "AZ",
+    age: 35,
+    isAdmin: true,
+    address: {
+        street: "23 Unity and Peace Estate",
+        city: "Ilorin",
+        state: "Kwara"
+    },
+    hobbies: ["Music", "Sports"]
+}
+
+//  Accessing an array inside an object
+
+x = person.hobbies[0]
+y = person.hobbies[1]
+// let y = person["hobbies"][1]
+console.log(x, y)
+
+// updating a property
+person.name = "Bode"
+person.street = "Road C Pegamut Estate"
+console.log(person)
+
+
+// deleting a property
+delete person.address.state
+delete person.address.city
+console.log(person)
+
+// adding a function to an object with only function expression
+person.greet = function() {
+    console.log(`Hello, my name is ${this.name}`)
+}
+
+person.greet();
+
+// value and reference
+// copying primitive value
+
+// copying numbers
+let x1 = 1
+let y1 = x1;
+
+x1 = 2
+console.log(x1);
+console.log(y1);
+
+// copying strings
+
+let firstPerson = "Mark"
+let secondPerson = firstPerson
+
+firstPerson = "Austin";
+
+console.log(firstPerson);
+console.log(secondPerson);
+
+
+// copying arrays
+
+const animals = ["dogs", "cats"]
+const otherAnimals = animals
+
+animals.push("Goat");
+// console.log(animals)
+console.log(animal === otherAnimals)
+
+
+const data = {
+    firstName: "Zainab",
+    lastName: "Abdullah"
+}
+
+const otherData = data;
+// console.log(data);
+console.log(data === otherData)
+
+
+
+// EQUALITY
+
+const person1 = {
+    firstName: "Soliu"
+}
+
+const otherPerson1 = {
+    firstName: "Soliu"
+}
+
+console.log(person1 === otherPerson1) // false
+
+const otherPerson3 = person1
+console.log(person1 === otherPerson3) //true
