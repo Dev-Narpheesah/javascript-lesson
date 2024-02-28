@@ -55,7 +55,7 @@ personDetails.name = "Soliu";
 console.log(personDetails);
 console.log(changeDetails);
 
-const originalObj = {
+const originalObjs = {
     name: "Bash",
     age: 20,
     address: {
@@ -64,13 +64,13 @@ const originalObj = {
     }
 };
 
-const cloneObj = Object.assign({}, originalObj);
+const cloneObjs = Object.assign({}, originalObjs);
 
-cloneObj.name = "Naphy";
-cloneObj.address.city = "Elejigbo";
+cloneObjs.name = "Naphy";
+cloneObjs.address.city = "Elejigbo";
 
-console.log("originalObj", originalObj);
-console.log("cloneObj", cloneObj);
+console.log("originalObj", originalObjs);
+console.log("cloneObjs", cloneObjs);
 
 
 // Spreading Operator
@@ -103,4 +103,60 @@ numb.push(7)
  console.log(cloneMerge);
 
 
+//  const details = {
+//     firstName: "Kenny",
+//     car: {
+//         brand: "Toyota",
+//         Wheels: 4,
+//         color: 'red'
+//     }
+//  }
+//  const newDetails = {...details};
+//  newDetails.firstName = "Mike"
+
+// newDetails.car.color  = "blue"
+
+//  console.log(details);
+//  console.log(newDetails);
+
+// JSON.stringify()
  
+
+ const details = {
+    firstName: "Kenny",
+    car: {
+        brand: "Toyota",
+        wheel: 4,
+        color: 'red'
+    }
+};
+
+const stringnifiedDetails = JSON.stringify(details)
+console.log(stringnifiedDetails)
+
+const newDetails = JSON.parse(stringnifiedDetails)
+console.log(newDetails)
+
+newDetails.car.color = "Blue";
+
+console.log(details.car.color);
+console.log(newDetails.car.color);
+
+const originalObj = {
+    name: "Zainab",
+    age: 12,
+    address: {
+        local: "Agege wa",
+        area: 'Baba Yemi'
+    }
+}
+
+const cloneObj = JSON.parse(JSON.stringify(originalObj));
+
+cloneObj.name = 'Soliu';
+cloneObj.age = 54;
+cloneObj.address.local = "Pegamut";
+cloneObj.address.area = "Mujahiddun";
+
+console.log(originalObj);
+console.log(cloneObj)
