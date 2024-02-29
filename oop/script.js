@@ -62,5 +62,8 @@ console.log(myNumber.toFixed(0));
 // THIS keyword --> is used to reference the object that is executing the current function.         In otherwords every function has a reference to its current executon context
 
 function Sentence(words) { //constructor function syntax
-    
+    this.words = words;
+    console.log(this)
 }
+
+const $_ = new Sentence(`Hello there! We're learning about this keyword`); 

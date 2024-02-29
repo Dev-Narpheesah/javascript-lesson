@@ -13,3 +13,5 @@ Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing the repetitio
 
 
 // The NEW keyword --> creates a new empty object
+
+// THIS keyword --> is used to reference the object that is executing the current function.         In otherwords every function has a reference to its current executon context
