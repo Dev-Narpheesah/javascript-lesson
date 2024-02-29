@@ -67,3 +67,34 @@ function Sentence(words) { //constructor function syntax
 }
 
 const $_ = new Sentence(`Hello there! We're learning about this keyword`); 
+
+function Car(color, brand, wheels, id) {
+    this.color = color;
+    this.brand = brand;
+    this.wheels = wheels;
+    this.id = id;
+
+    console.log(this);
+}
+
+const blueCar = new Car("Blue", "BMW", 4, "🚓");
+const redCar = new Car("Red", "Ferrari", 4, "🏎️");
+
+// create a cohort function with params (name, age, favFood, phoneNo, birthday), create new instance for three different cohorts, log the params argumument onto the console --> birthday should be a new date instance. 10minutes.
+
+function Cohort(name, age, favFood, phoneNo, baiday) {
+    this.name = name;
+    this.age = age;
+    this.favFood = favFood;
+    this.phoneNo = phoneNo;
+    this.baiday = baiday;
+
+    console.log(this);
+}
+
+const newCohort = new Cohort("Hayzed", 25, "Fufu", 1234, new Date("january 12, 2000"));
+
+const newCohort$ = new Cohort("Eef", 24, "Pounded yam", 4567, new Date("february 11, 2001"));
+
+const new$Cohort = new Cohort("Soliu", 23, "Semo", 7890, new Date("march 10, 2002"));
+
