@@ -10,9 +10,16 @@ const myInterval = setTimeout(() => console.log("Hello World!"), 1000);
 const functionOne = () => {
     console.log("Function One");
 
-     functionTwo()
+    functionTwo()
+    console.log("Function One, part two");
 }
 
-const functionTwo = () => [
+const functionTwo = () => {
+   
+    setTimeout(() =>  console.log("Function Two"), 2000);
+}
 
-]
+// console.log(functionOne());
+functionOne()
+
+

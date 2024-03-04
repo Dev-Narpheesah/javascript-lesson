@@ -51,3 +51,41 @@ Synchronous refers to real-time communication where each party receives (and if 
 A human example is the telephone — during a telephone call you tend to respond to another person immediately.
 
 Many programming commands are also synchronous — for example when you type in a calculation, the environment will return the result to you instantly, unless you program it not to.
+
+
+What are APIs?
+Application Programming Interfaces (APIs) are constructs made available in programming languages to allow developers to create complex functionality more easily. They abstract more complex code away from you, providing some easier syntax to use in its place.
+
+As a real-world example, think about the electricity supply in your house, apartment, or other dwellings. If you want to use an appliance in your house, you plug it into a plug socket and it works. You don't try to wire it directly into the power supply — to do so would be really inefficient and, if you are not an electrician, difficult and dangerous to attempt.
+
+A Web API is a developer's dream.
+
+It can extend the functionality of the browser
+It can greatly simplify complex functions
+It can provide easy syntax to complex code
+What is Web API?
+API stands for Application Programming Interface.
+
+A Web API is an application programming interface for the Web.
+
+A Browser API can extend the functionality of a web browser.
+
+A Server API can extend the functionality of a web server.
+
+Example
+Get the latitude and longitude of the user's position:
+
+const myElement = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    myElement.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  myElement.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
