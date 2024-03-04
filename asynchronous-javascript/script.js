@@ -77,15 +77,27 @@ const user3 = fetchUserTwo("Micheal", (user) => {
 // This is called callback Hell. it becomes unreable
 
 const user4 = fetchUserTwo("Micheal", (user) => {
-    fetchUserPhotos(user.username, (userPhotos) => {
+  fetchUserPhotos(user.username, (userPhotos) => {
+    fetchUserPhotosDetails(userPhotos[0], (details) => {
+      fetchUserPhotosDetails(userPhotos[0], (details) => {
         fetchUserPhotosDetails(userPhotos[0], (details) => {
-            fetchUserPhotosDetails(userPhotos[0], (details) => {
-                fetchUserPhotosDetails(userPhotos[0],(details) => {
-                    fetchUserPhotosDetails(userPhotos[0], (details) => {
-                        console.log(details);
-                    })
-                })
-            })
-        })
-    })
-})
+          fetchUserPhotosDetails(userPhotos[0], (details) => {
+            console.log(details);
+          });
+        });
+      });
+    });
+  });
+});
+
+
+const promise = new Promise ((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Now we are Promise");
+      resolve({username: "Bode"})
+    //   reject("User not Found")  
+    }, 5000);
+});
+promise
+.then((user) => console.log(user.username));
+// .catch((error) => console.log(error));
