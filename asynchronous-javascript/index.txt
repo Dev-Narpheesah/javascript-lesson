@@ -1,0 +1,53 @@
+Asynchronous JavaScript
+The examples used in the previous chapter, was very simplified.
+
+The purpose of the examples was to demonstrate the syntax of callback functions:
+
+Example
+function myDisplayer(something) {
+  document.getElementById("demo").innerHTML = something;
+}
+
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer);
+
+Waiting for Intervals:
+When using the JavaScript function setInterval(), you can specify a callback function to be executed for each interval:
+
+Example
+setInterval(myFunction, 1000);
+
+function myFunction() {
+  let d = new Date();
+  document.getElementById("demo").innerHTML=
+  d.getHours() + ":" +
+  d.getMinutes() + ":" +
+  d.getSeconds();
+}
+
+//when we are talking aabout asy, we are talking about setinterval() and settimeout()
+//method dey with parenthesis
+// interval allow u to execute a chunk of codes
+//  everytime a specified amount of milliseconds passes
+
+settimeout functions allow u to wait a certain amount
+ of time before  executing a chunk of codes
+
+ //*SETINTERVAL () AND SETTIMEOUT ()*//
+
+////* SetInterval is a function that allow you to execute a chunk of code, 
+//everyttime a specified amount of milisecond passess.
+
+////* setTimeout allow you to waiat a certain amount of time before executing a chunk 
+//of code, do note that other code outside of timeout will continue execution as Normal.
+
+Synchronous
+Synchronous refers to real-time communication where each party receives (and if necessary, processes and replies to) messages instantly (or as near to instantly as possible).
+
+A human example is the telephone — during a telephone call you tend to respond to another person immediately.
+
+Many programming commands are also synchronous — for example when you type in a calculation, the environment will return the result to you instantly, unless you program it not to.

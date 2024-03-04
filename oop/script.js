@@ -11,7 +11,7 @@
 
 //OOP --. Object Oriented Programming.
 
-//  Object Literal
+//  Object Literals
 let person = {
     first_name : "Salman",
     last_name : "Kofoshi",
@@ -187,3 +187,87 @@ const RectShape = class RectShape {
 
 const square = new RectShape (10, 10)
 console.log(square.area)
+
+// //********** Different between const and class **************///
+
+// const detailOne = {
+//     name: "Class Captain",
+//     age: 540,
+//     isBlack: false
+// }
+
+// const detailTwo = {
+//     name: "Baba Oloye",
+//     age: 640,
+//     isBlack: true
+// }
+
+// const getDetailOne = new detailOne()
+// console.log(getDetailOne)
+
+
+class Detail {
+    constructor(name, age, isPretty) {
+        this.name = name;
+        this.age = age;
+        this.isPretty = isPretty;
+    }
+}
+
+const detailOne = new Detail("Bash",12, false)
+const detailTwo = new Detail("Nafi",10, false)
+const detailThree = new Detail("Bode",2, true)
+
+const array = [detailOne, detailTwo]
+array.push(detailThree);
+array.shift(detailOne);
+console.log(array);
+
+
+const createPerson = (name, age, isHands) => {
+    // const userSchema = {
+    //     name, age, isHands
+    // }
+    // return userSchema
+
+    return {name, age, isHands};
+}
+
+const personCreated = createPerson("Bode", 45, true);
+console.log(personCreated);
+
+// INHERITANCE
+class Animal {
+    alive = true
+
+    isBeautiful = 'This animal is beautiful';
+
+    eat() {
+        console.log(`This ${this.name} can eat`);
+    }
+
+    sleep() {
+        console.log(`This ${this.name} can sleep`);
+    }
+};
+
+class Rabbit extends Animal {
+    name = "Rabbit"
+
+    run() {
+        console.log(`This ${this.name} can run`)
+    }
+}
+
+class Goat extends Animal {
+    name = "Goat"
+}
+
+
+const rabbit = new Rabbit ();
+rabbit.eat()
+console.log(rabbit);
+
+const goat = new Goat()
+goat.eat();
+console.log(goat.isBeautiful)

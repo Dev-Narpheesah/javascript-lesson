@@ -20,3 +20,6 @@ Tip: The "Don't Repeat Yourself" (DRY) principle is about reducing the repetitio
 // it can be defined as
 // 1. Class derclaration
 // 2. Class expression
+
+
+inheritance is the ability of a class to derive properties and xtics from another clsss, while having its own properties as well
