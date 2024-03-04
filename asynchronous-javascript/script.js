@@ -75,3 +75,17 @@ const user3 = fetchUserTwo("Micheal", (user) => {
 });
 
 // This is called callback Hell. it becomes unreable
+
+const user4 = fetchUserTwo("Micheal", (user) => {
+    fetchUserPhotos(user.username, (userPhotos) => {
+        fetchUserPhotosDetails(userPhotos[0], (details) => {
+            fetchUserPhotosDetails(userPhotos[0], (details) => {
+                fetchUserPhotosDetails(userPhotos[0],(details) => {
+                    fetchUserPhotosDetails(userPhotos[0], (details) => {
+                        console.log(details);
+                    })
+                })
+            })
+        })
+    })
+})
