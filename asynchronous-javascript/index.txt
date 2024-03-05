@@ -1,5 +1,9 @@
 Asynchronous JavaScript
+
+What is asynchronous in JavaScript?
+In summary, asynchronous programming is an essential concept in JavaScript that allows your code to run in the background without blocking the execution of other code. Developers can create more efficient and responsive applications by using features like callbacks, async/await, and promises.
 The examples used in the previous chapter, was very simplified.
+
 
 The purpose of the examples was to demonstrate the syntax of callback functions:
 
@@ -52,6 +56,10 @@ A human example is the telephone — during a telephone call you tend to respond
 
 Many programming commands are also synchronous — for example when you type in a calculation, the environment will return the result to you instantly, unless you program it not to.
 
+What is asynchronous and synchronous code in JavaScript?
+Explained: Asynchronous vs. Synchronous Programming
+The differences between asynchronous and synchronous include: Async is multi-thread, which means operations or programs can run in parallel. Sync is a single-thread, so only one operation or program will run at a time. Async is non-blocking, which means it will send multiple requests to a server.
+
 
 What are APIs?
 Application Programming Interfaces (APIs) are constructs made available in programming languages to allow developers to create complex functionality more easily. They abstract more complex code away from you, providing some easier syntax to use in its place.
@@ -90,6 +98,10 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 
+What are callbacks in JavaScript?
+What is a Callback Function in JavaScript? | Simplilearn
+A JavaScript callback is a function which is to be executed after another function has finished execution. A more formal definition would be - Any function that is passed as an argument to another function so that it can be executed in that other function is called as a callback function.
+
 
 The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
 
@@ -117,3 +129,120 @@ myPromise
   .then(handleFulfilledA, handleRejectedA)
   .then(handleFulfilledB, handleRejectedB)
   .then(handleFulfilledC, handleRejectedC);
+
+  Promises in JavaScript are a powerful tool for managing asynchronous operations. Let’s dive into the details:
+
+What is a Promise?
+A Promise represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+It’s like a placeholder for a value that may not be known immediately when the promise is created.
+Promises allow you to handle async tasks in a more organized and structured way.
+How Do Promises Work?
+A Promise has two primary properties:
+State: While a promise is “pending,” it’s actively working. The result is undefined during this phase.
+Result: When a promise is “fulfilled,” it holds a specific value. If it’s “rejected,” it contains an error object.
+Here’s a basic example of creating and using a promise:
+JavaScript
+
+const fetchData = new Promise((resolve, reject) => {
+  // Simulate fetching data (e.g., from an API)
+  setTimeout(() => {
+    const data = { id: 1, name: 'John Doe' };
+    resolve(data); // Resolve with the fetched data
+  }, 1000);
+});
+
+// Using the promise
+fetchData
+  .then((result) => {
+    console.log('Data fetched:', result);
+  })
+  .catch((error) => {
+    console.error('Error fetching data:', error);
+  });
+AI-generated code. Review and use carefully. More info on FAQ.
+In this example:
+We create a promise (fetchData) that simulates fetching data after a delay.
+If successful, we resolve the promise with the fetched data.
+If there’s an error, we reject the promise with an error object.
+We use .then() to handle the successful result and .catch() for errors.
+Why Should You Care About Promises?
+In the past, callbacks were used for async operations, leading to callback hell (nested callbacks).
+Promises provide a cleaner alternative.
+They allow you to chain async tasks, making code more readable and maintainable.
+Async/Await Syntax:
+Derived from promises, async/await simplifies handling async code.
+Example:
+JavaScript
+
+async function fetchData() {
+  try {
+    const result = await fetchDataFromAPI(); // Await the promise
+    console.log('Data fetched:', result);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  }
+}
+
+
+
+✨ What is Callback Hell? Callback Hell is a situation in JavaScript where multiple nested callback functions make your code look like it's been through a blender on the highest setting.
+
+
+The async function declaration creates a binding of a new async function to a given name. The await keyword is permitted within the function body, enabling asynchronous, promise-based behavior to be written in a cleaner style and avoiding the need to explicitly configure promise chains.
+
+function resolveAfter2Seconds() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve('resolved');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('calling');
+  const result = await resolveAfter2Seconds();
+  console.log(result);
+  // Expected output: "resolved"
+}
+
+asyncCall();
+
+async makes a function return a Promise
+
+await makes a function wait for a Promise
+
+Async Syntax
+The keyword async before a function makes the function return a promise:
+
+Example
+async function myFunction() {
+  return "Hello";
+}
+
+Await Syntax
+The await keyword can only be used inside an async function.
+
+The await keyword makes the function pause the execution and wait for a resolved promise before it continues:
+
+let value = await promise;
+
+
+
+try...catch
+The try...catch statement is comprised of a try block and either a catch block, a finally block, or both. The code in the try block is executed first, and if it throws an exception, the code in the catch block will be executed. The code in the finally block will always be executed before control flow exits the entire construct.
+
+Description
+The try statement always starts with a try block. Then, a catch block or a finally block must be present. It's also possible to have both catch and finally blocks. This gives us three forms for the try statement:
+
+try...catch
+try...finally
+try...catch...finally
+
+//  try and catch 
+try block contain the code that u want to attempt 
+if an error occur within this block , js will stop executing,
+ the try block will now jump to the catch block''
+ the catch block, is a place where you can handle the error , when an error occur,
+  it will jump to the Catch..
+   finally block is optional , always 
+  run either there is a error or Not, kogbonkankan
