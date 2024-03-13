@@ -245,4 +245,4 @@ if an error occur within this block , js will stop executing,
  the catch block, is a place where you can handle the error , when an error occur,
   it will jump to the Catch..
    finally block is optional , always 
-  run either there is a error or Not, kogbonkankan
+  run either there is a error or Not,

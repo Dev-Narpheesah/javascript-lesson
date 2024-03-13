@@ -268,30 +268,87 @@ fetchDataWithErr().then((result) => {
 //   }
 // }
 // fetchData()
-const fetchNestDta = async () => {
 
-  try{
-      console.log("username")
- const response = await fetch('https://jsonplaceholder.typicode.com/users'); 
-  
-  if(!response.ok){
-      throw new Error("Not found will fixed soon")
+//Class-Work-Before-Break
+
+// To get all the 10names, email, & username only
+const fetchAllData = async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    if (!response.ok) {
+      throw new Error("Not found will fixed soon");
+    }
+
+    const userData = await response.json(); //Assuming data is an array of user
+    const mappedData = userData.map(({ username, email, name }) => {
+      return { username, email, name };
+    });
+    console.log(mappedData);
+  } catch (error) {
+    console.log("Error:", error.message);
   }
-  const userData = await response.json() 
-  const mappedData = userData.map(({ id, username, email, name, address, phone, website, company}) =>({
-  id, username, email, name, address: {
-      street: address.street,
-  },
-  phone,
-   website, 
-   company: {
-      name: company.name
+};
+fetchAllData();
+
+//To get all user Address Details, and company name
+
+const fetchNestData = async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+    if (!response.ok) {
+      throw new Error("Not found will fixed soon");
+    }
+
+    const userData = await response.json(); //Assuming data is an array of user
+
+    const mappedData = userData.map(
+      ({ id, username, email, name, address, phone, website, company }) => ({
+        id,
+        username,
+        email,
+        name,
+        address: {
+          street: address.street,
+        },
+        phone,
+        website,
+        company: {
+          name: company.name,
+        },
+      })
+    );
+
+    console.log(mappedData);
+  } catch (error) {}
+
+  try {
+  } catch (error) {
+    console.log("Error:", error.message);
   }
-      
-}));
-console.log(mappedData)
-  }catch (error){
-      console.log("error:",error.message)
-}   
-}
-  fetchNestDta()
+};
+fetchNestData();
+
+  // Mathematical Method
+
+  const roundNub = Math.round(4.4);
+  console.log(roundNub);
+
+  const ceil = Math.ceil(4.7);
+  console.log(ceil);
+
+  const floor = Math.floor(4.3);
+  console.log(floor);
+
+  const sign = Math.sign(6, 5);
+  console.log(sign);
+
+  const pow = Math.pow(8, 2);
+  console.log(pow);
+
+  const square = Math.sqrt(81);
+  console.log(square);
+
+  const absolute = Math.abs(-4.7)
+  console.log(absolute);

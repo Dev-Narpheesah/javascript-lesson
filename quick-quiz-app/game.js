@@ -7,6 +7,7 @@ const game = document.getElementById("game");
 const loader = document.getElementById("loader");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 
+
 let currentQuestion = {};
 let acceptingAnswer = false;
 let score = 0;
@@ -19,8 +20,10 @@ fetch(
   "https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple"
 )
   .then((res) => {
-    return res.json();
-  })
+    return res.json()
+    })
+
+  
   .then((loadingQuestions) => {
     questions = loadingQuestions.results.map((loadingQuestion) => {
       const formattedQuestion = {
@@ -35,12 +38,12 @@ fetch(
         0,
         loadingQuestion.correct_answer
       );
-      answerChoices.forEach((choice, i) => {
+      answerChoices.forEach((choice, i)     => {
         formattedQuestion["choice" + (i + 1)] = choice;
       });
 
       return formattedQuestion;
-    });
+    }); 
 
     startGame();
   })
