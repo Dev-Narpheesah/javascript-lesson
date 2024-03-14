@@ -1,73 +1,71 @@
 const form = document.getElementById("form");
-const password1EL = document.getElementById("password1");
-const password2EL = document.getElementById("password2");
-const messageContainer = document.querySelector(".message-container");
+
+const password1 = document.getElementById("password1");
+
+const password2 = document.getElementById("password2");
+
 const message = document.getElementById("message");
 
+const messageContainer = document.querySelector(".message-container");
+
+
+let passMatch = false;
 let isValid = false;
-let passwordMatch = false;
-
-const validateForm = () => {
-  isValid = form.checkVisibility();
-  console.log(isValid);
-
-  // style message for an error
+const validateForm = ()=>{
+    isValid = form.checkVisibility()
+    console.log(isValid)
+    // style main message for an error
   if (!isValid) {
     message.textContent = "Please fill out the field";
-    message.style.color = "red";
-    messageContainer.style.borderColor = "red";
-    return;
+    message.style.color = 'red';
+    messageContainer.style.borderColor = "red"
+    return
   }
-
   // check to see if password match
-
-  if (password1EL.value === password2EL.value) {
-    passwordMatch = true;
-    password1EL.style.borderColor = "green";
-    password2EL.style.borderColor = "green";
-  } else {
-    passwordMatch = false;
+  if(password1.value === password2.value){
+    passMatch = true;
+    password1.style.borderColor = "green !important"
+    password2.style.borderColor = "green !important"
+  }else{
+    passMatch = false;
     message.textContent = "Make sure password match.";
     message.style.color = "red";
     messageContainer.style.borderColor = "red";
-    password1EL.style.borderColor = "red";
-    password2EL.style.borderColor = "red";
+    password1.style.borderColor = "red !important";
+    password2.style.borderColor = "red !important";
     return
   }
-
-
-//   if form is valid and d password match return success message
-
-  if(isValid && passwordMatch) {
-    message.textContent = "Successfully registered";
+//   if form is valid and passwod match
+  if (isValid && passMatch) {
+    message.textContent = "Sucessfully registered."
     message.style.color = "green";
-    messageContainer.style.borderColor = "green";
+    messageContainer.style.borderColor = "green"
+   
     return
+    
   }
-};
-
-const storeFormData = () => {
-    const user = {
-        name:form.name.value,
-        phone:form.phone.value,
-        email:form.email.value,
-        website:form.website.value,
-        password:form.password.value
-    };
-    console.log(user)
+}
+function storeFormData () {
+  const user = {
+    name: form.name.value,
+    phone: form.phone.value,
+    email:form.email.value,
+    website:form.website.value,
+    password: form.password.value
+  };
+  console.log(user)
 }
 
+
 const processFormData = (e) => {
-    e.preventDefault();
-    console.log(e);
-    
-    validateForm();
+  e.preventDefault();
+  console.log(e)
+validateForm(); 
 
-    // submit data if valid
-    if(isValid && passwordMatch) {
-        
-    }
+if(isValid & passMatch) {
+  storeFormData(); 
+  form.reset();
+}
+}
 
-};
-
-form.addEventListener("submit", processFormData);
+form.addEventListener("submit",  processFormData);
